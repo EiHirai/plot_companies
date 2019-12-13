@@ -1,0 +1,18 @@
+###### Requirements without Version Specifiers ######
+
+###### Requirements with Version Specifiers ######
+
+# for analysis
+pandas == 0.24.1
+folium == 0.10.0
+matplotlib == 3.1.1
+
+for environment
+jupyter == 1.0.0
+
+# for latlon
+beautifulsoup4 == 4.8.1
+RW_S3 == 0.0.7
+zenhan == 0.5.2
+regex == 2019.11.1
+joblib == 0.14.0

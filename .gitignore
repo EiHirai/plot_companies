@@ -1,0 +1,11 @@
+# 拡張子を無視する
+*.csv
+*.ipynb
+*.html
+*.DS_Store
+
+# 特定のディレクトリを無視する
+/venv/
+/.ipynb_checkpoints/
+/.vscode/
+/data/
