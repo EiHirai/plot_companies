@@ -41,7 +41,7 @@ def calc_RGB_value(norm_count: float):
 def add_color_col(df):
     '''colorカラムを追加
     Args:
-        df (pd.DataFrame): e_rentカラムを含むデータフレーム
+        df (pd.DataFrame): countカラムを含むデータフレーム
     Returns:
         pd.DataFrame
         'color'カラムを追加して返す

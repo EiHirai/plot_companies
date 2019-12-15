@@ -3,6 +3,8 @@
 *.ipynb
 *.html
 *.DS_Store
+*.xlsx
+*.pptx
 
 # 特定のディレクトリを無視する
 /venv/

@@ -37,7 +37,7 @@ def calc_RGB_value(norm_count: float):
 def add_color_col(df):
     '''colorカラムを追加
     Args:
-        df (pd.DataFrame): e_rentカラムを含むデータフレーム
+        df (pd.DataFrame): countカラムを含むデータフレーム
     Returns:
         pd.DataFrame
         'color'カラムを追加して返す
@@ -45,6 +45,7 @@ def add_color_col(df):
     norm = cl.Normalize(vmin=df['count'].min(), vmax=df['count'].max())
     norm_count_ = [norm(v) for v in df['count']]  # 企業数を0,1スケールにする
     color_ = [calc_RGB_value(norm_count) for norm_count in norm_count_]
+    df['norm_count'] = norm_count_
     df['color'] = color_
     return df
 
@@ -60,7 +61,7 @@ def add_to_m(i):
         s3r.read_json_file('prd-data-store', 'location/geojson/city/_' + str(int(df_tokyo.city_id[i])) + '.json'),
         name='region_name',
         style_function = lambda x: {
-                                'fillOpacity': 1,
+                                'fillOpacity': df_tokyo.norm_count[i] * 2,
                                 'fillColor': df_tokyo.color[i],
                                 'color': 'white',
         })
