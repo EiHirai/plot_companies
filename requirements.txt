@@ -7,7 +7,7 @@ pandas == 0.24.1
 folium == 0.10.0
 matplotlib == 3.1.1
 
-for environment
+# for environment
 jupyter == 1.0.0
 
 # for latlon
