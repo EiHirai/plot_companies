@@ -15,4 +15,4 @@ beautifulsoup4 == 4.8.1
 RW_S3 == 0.0.7
 zenhan == 0.5.2
 regex == 2019.11.1
-joblib == 0.14.0
+joblib == 1.2.0
